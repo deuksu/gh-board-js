@@ -18,3 +18,7 @@
 ### 향후 개선 사항
 
 - Database 연결
+
+### 문의
+
+1. document.getElementById vs document.queryForSelector
