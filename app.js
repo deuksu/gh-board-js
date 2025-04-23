@@ -6,7 +6,7 @@ const savePosts = () => {
 
 const addPost = () => {
   const textarea = document.querySelector("#postContent");
-  const content = textarea.ariaValueMax.trim();
+  const content = textarea.value.trim();
   if (!content) {
     return;
   }
