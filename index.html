@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Min Board App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>게시판</h1>
+    </header>
+    <main>
+      <section class="post-form">
+        <textarea
+          id="postContent"
+          placeholder="무엇을 공유하고 싶나요?"
+          rows="3"
+        ></textarea>
+        <button onclick="addPost()">게시하기</button>
+      </section>
+
+      <section class="post-list" id="postList">
+        <!--게시글 목록-->
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

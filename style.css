@@ -1,0 +1,75 @@
+:root {
+  --primary: #007bff;
+  --bg: #f4f4f4;
+  --text: #333;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--bg);
+}
+
+header {
+  background-color: var(--primary);
+  color: white;
+  padding: 16px;
+  text-align: center;
+  font-size: 1.4 rem;
+}
+
+main {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+.post-form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+textarea {
+  padding: 10px;
+  font-size: 1 rem;
+  resize: none;
+}
+
+button {
+  align-self: flex-end;
+  padding: 8px 14px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+.post {
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-meta {
+  font-size: 0.8 rem;
+  color: gray;
+  margin-top: 8px;
+}
+
+.comments {
+  margin-top: 12px;
+  border-top: 1px solid #ddd;
+  padding-top: 8px;
+}
+
+.comments input {
+  margin-top: 5px;
+  padding: 6px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 0.9 rem;
+}
