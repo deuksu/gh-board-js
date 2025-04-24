@@ -1,4 +1,4 @@
-let posts = JSON.parse(localStorage.getItem("posts")) || [];
+dlet posts = JSON.parse(localStorage.getItem("posts")) || [];
 
 const savePosts = () => {
   localStorage.setItem("posts", JSON.stringify(posts));
@@ -37,7 +37,12 @@ const renderPosts = () => {
 
     const commentsHtml = comments
       .map((comm) => {
-        return `<div>- ${comm.text}<small>${comm.createdAt}</small></div>`;
+        return `
+          <div class="comment-item">
+            <span>${comm.text}</span>
+            <span class="comment-meta">${comm.createdAt}</span>
+          </div>  
+          `;
       })
       .join("");
 
@@ -48,11 +53,14 @@ const renderPosts = () => {
         <div class="comments">
           <strong>댓글</strong>
           ${commentsHtml}
-          <input
-            type="text"
-            placeholder="댓글 입력"
-            onkeypress="if(event.key == 'Enter') { addComment(${id}, this.value); this.value = '';}"
-          />
+          <div class="comment-input>
+            <input
+              type="text"
+              placeholder="댓글 입력"
+              id="comment-input-${id}"
+            />
+            <button onclick="addComment(${id})">추가</button>
+          </div>
         </div>      
       `;
     postList.appendChild(postEl);
@@ -64,9 +72,15 @@ const deletePost = (id) => {
   savePosts();
   renderPosts();
 };
-const addComment = (postId, commentText) => {
+
+const addComment = (postId) => {
+  const commentInput = document.querySelector(`#comment-input-${postId}`);
+  const commentText = commentInput.value.trim();
+  if (!commentText) {
+    return;
+  } 
   posts = posts.map((post) =>
-    postId == post.id
+    commentText == post.id
       ? {
           ...post,
           comments: [
