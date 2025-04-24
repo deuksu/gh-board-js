@@ -69,7 +69,6 @@ button {
 .comment-item {
   display: flex;
   justify-content: space-between;
-  text-align: center;
   font-size: 0.9rem;
   margin: 4px 0;
   color: #444;
@@ -79,6 +78,7 @@ button {
 .comment-item span:first-child {
   flex: 1;
   word-break: break-word;
+  padding-left: 15px;
 }
 
 .comment-meta {

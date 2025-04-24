@@ -58,6 +58,7 @@ const renderPosts = () => {
               type="text"
               placeholder="댓글 입력"
               id="comment-input-${id}"
+              onclick="if(event.key == 'Enter') addComment(${id});"
             />
             <button onclick="addComment(${id})">추가</button>
           </div>
@@ -93,6 +94,8 @@ const addComment = (postId) => {
 
   savePosts();
   renderPosts();
+
+  commentInput.focus();
 };
 
 renderPosts();
