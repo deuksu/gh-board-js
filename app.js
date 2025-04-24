@@ -22,12 +22,12 @@ const addPost = () => {
   posts = [newPost, ...posts];
 
   savePosts();
-  reanderPosts();
+  renderPosts();
 
   textarea.value = "";
 };
 
-const reanderPosts = () => {
+const renderPosts = () => {
   const postList = document.querySelector("#postList");
   postList.innerHTML = "";
 
@@ -60,9 +60,9 @@ const reanderPosts = () => {
 };
 
 const deletePost = (id) => {
-  posts = posts.filters((p) => id != p.id);
+  posts = posts.filter((p) => id != p.id);
   savePosts();
-  renderPost();
+  renderPosts();
 };
 const addComment = (postId, commentText) => {
   posts = posts.map((p) => {
@@ -78,7 +78,7 @@ const addComment = (postId, commentText) => {
   });
 
   savePosts();
-  reanderPosts();
+  renderPosts();
 };
 
-renderPost();
+renderPosts();
