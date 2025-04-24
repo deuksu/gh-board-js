@@ -55,8 +55,8 @@ const renderPost = () => {
           />
         </div>      
       `;
+    postList.appendChild(postEl);
   });
-  postList.appendChild(postEl);
 };
 
 const deletePost = (id) => {
