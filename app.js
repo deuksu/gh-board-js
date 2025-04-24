@@ -65,17 +65,17 @@ const deletePost = (id) => {
   renderPosts();
 };
 const addComment = (postId, commentText) => {
-  posts = posts.map((p) => {
-    postId == p.id
+  posts = posts.map((post) =>
+    postId == post.id
       ? {
-          ...p,
+          ...post,
           comments: [
-            ...p.comments,
+            ...post.comments,
             { text: commentText, createdAt: new Date().toLocaleString() },
           ],
         }
-      : p;
-  });
+      : post
+  );
 
   savePosts();
   renderPosts();
