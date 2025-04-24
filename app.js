@@ -80,7 +80,7 @@ const addComment = (postId) => {
     return;
   }
   posts = posts.map((post) =>
-    commentText == post.id
+    postId == post.id
       ? {
           ...post,
           comments: [
