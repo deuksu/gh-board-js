@@ -1,4 +1,4 @@
-dlet posts = JSON.parse(localStorage.getItem("posts")) || [];
+let posts = JSON.parse(localStorage.getItem("posts")) || [];
 
 const savePosts = () => {
   localStorage.setItem("posts", JSON.stringify(posts));
@@ -78,7 +78,7 @@ const addComment = (postId) => {
   const commentText = commentInput.value.trim();
   if (!commentText) {
     return;
-  } 
+  }
   posts = posts.map((post) =>
     commentText == post.id
       ? {
