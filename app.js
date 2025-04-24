@@ -27,7 +27,7 @@ const addPost = () => {
   textarea.value = "";
 };
 
-const renderPost = () => {
+const reanderPosts = () => {
   const postList = document.querySelector("#postList");
   postList.innerHTML = "";
 
