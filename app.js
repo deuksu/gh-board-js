@@ -53,7 +53,7 @@ const renderPosts = () => {
         <div class="comments">
           <strong>댓글</strong>
           ${commentsHtml}
-          <div class="comment-input>
+          <div class="comment-input">
             <input
               type="text"
               placeholder="댓글 입력"
